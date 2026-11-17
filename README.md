@@ -1,36 +1,198 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tanmoy Debnath — Portfolio
+
+A modern, responsive personal portfolio website showcasing my skills, projects, education, and professional background as a Full Stack Developer.
+
+## About
+
+Hi, I'm **Tanmoy Debnath**, a Full Stack Developer from Barishal, Bangladesh, with 1+ year of experience in web development.
+
+I enjoy building practical web applications, exploring modern technologies, and solving real-world problems through code. My interests include AI-assisted development, web performance, SEO, and secure application development. My long-term goal is to become an AI Engineer.
+
+## Live Website
+
+**Portfolio:** [Add your deployed portfolio URL here]
+
+## Features
+
+- Modern, responsive dark-themed design
+- Emerald-accented visual design system
+- Responsive navigation with mobile menu
+- Hero section with personal introduction
+- About section highlighting background and professional goals
+- Categorized technical skills showcase
+- Project showcase with screenshots and external links
+- Education section
+- Contact information and social links
+- SEO-friendly page metadata
+- Reusable components and centralized portfolio data
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js 16 (App Router) | React framework and routing |
+| React 19 | UI development |
+| TypeScript | Static typing |
+| Tailwind CSS 4 | Utility-first styling |
+| shadcn/ui | UI component system |
+| Base UI | Accessible component primitives |
+| Lucide React | Icons |
+| Class Variance Authority | Component variant management |
+| ESLint 9 | Code quality and linting |
+
+## Featured Projects
+
+### 1. BAZAR DOR — Market Price Tracker
+
+A Bangla-first market price tracking application that helps users explore daily prices of essential products across different markets in Bangladesh.
+
+**Key Highlights**
+- Daily market price information
+- Market-wise price comparison
+- Price trends and change indicators
+- Product categories and sorting
+
+**Technologies:** Next.js, React, TypeScript, Tailwind CSS, DaisyUI, Better Auth, REST API, MongoDB
+
+- [Live Demo](https://a7-bazar-dor-green.vercel.app/)
+- [GitHub Repository](https://github.com/ExTanmoy/a7-bazar-dor)
+
+### 2. FITLOG — Workout Management App
+
+A workout management application where users can explore exercises, organize daily workout plans, and save their favorite workouts.
+
+**Key Highlights**
+- Workout library and category browsing
+- Workout details
+- Daily workout planning
+- Saved workouts
+- Shared state management with Context API
+- Local storage persistence
+
+**Technologies:** Next.js, React, TypeScript, Tailwind CSS, DaisyUI, Context API, REST API, Local Storage
+
+- [Live Demo](https://a06-fit-log-jet.vercel.app/)
+- [GitHub Repository](https://github.com/ExTanmoy/a06-fit-log)
+
+### 3. DEVSTACK — Developer Stack Builder
+
+An interactive application that allows users to explore developer technologies and build a custom technology stack.
+
+**Key Highlights**
+- Explore technologies from categorized collections
+- Add and remove technologies from a custom stack
+- Prevent duplicate selections
+- Responsive technology cards
+- Toast notifications for user interactions
+
+**Technologies:** React, TypeScript, JavaScript, Tailwind CSS, DaisyUI, Vite
+
+- [Live Demo](https://devstack-a05-ph-ex.netlify.app/)
+- [GitHub Repository](https://github.com/ExTanmoy/A05-DevStack-React-Ts)
+
+## Project Structure
+
+```text
+my-portfolio/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── sections/
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Education.tsx
+│   │   └── Contact.tsx
+│   └── ui/
+├── data/
+│   └── portfolio.ts
+├── lib/
+│   └── utils.ts
+├── public/
+│   └── images/
+├── AGENTS.md
+├── components.json
+├── next.config.ts
+├── package.json
+└── tsconfig.json
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+Navigate to the project directory:
+
+```bash
+cd my-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the production application |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+Additional TypeScript validation:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx tsc --noEmit
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Centralized Portfolio Data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Portfolio content is maintained in:
 
-## Deploy on Vercel
+```text
+data/portfolio.ts
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Personal information, social links, skills, education, and project information are organized in one place to make future updates easier.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+**Tanmoy Debnath**  
+Full Stack Developer  
+Barishal, Bangladesh
+
+- Email: [ExTanmoy0@gmail.com](mailto:ExTanmoy0@gmail.com)
+- GitHub: [ExTanmoy](https://github.com/ExTanmoy)
+- LinkedIn: [extanmoy](https://www.linkedin.com/in/extanmoy/)
+
+---
+
+Built with Next.js, React, TypeScript, and Tailwind CSS.
