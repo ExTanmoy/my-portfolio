@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Send, MapPin } from "lucide-react";
+import { ArrowRight, Download, Send, MapPin } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -64,6 +64,17 @@ export function Hero() {
                 <span>View Projects</span>
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
+
+              <a
+                href={personalInfo.resumeUrl}
+                className={cn(
+                  buttonVariants({ variant: "secondary", size: "lg" }),
+                  "gap-2 border border-border/70 shadow-xs"
+                )}
+              >
+                <span>Download Resume</span>
+                <Download className="size-4" aria-hidden="true" />
+              </a>
 
               <Link
                 href="#contact"

@@ -1,9 +1,24 @@
 import React from "react";
-import { Code2, Zap, Sparkles, GraduationCap } from "lucide-react";
-import { portfolioData } from "@/data/portfolio";
+import {
+  BookOpen,
+  Code2,
+  Dumbbell,
+  GraduationCap,
+  Plane,
+  Sparkles,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import { portfolioData, type HobbyName } from "@/data/portfolio";
+
+const HOBBY_ICONS: Record<HobbyName, LucideIcon> = {
+  Reading: BookOpen,
+  Sports: Dumbbell,
+  Traveling: Plane,
+};
 
 export function About() {
-  const { personalInfo, education } = portfolioData;
+  const { personalInfo, education, hobbies } = portfolioData;
 
   const highlights = [
     {
@@ -79,6 +94,36 @@ export function About() {
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                     {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Hobbies */}
+        <div className="mt-12 border-t border-border/40 pt-8">
+          <h3 className="mb-5 text-lg font-semibold tracking-tight text-foreground">
+            Hobbies & Interests
+          </h3>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {hobbies.map((hobby) => {
+              const Icon = HOBBY_ICONS[hobby.title];
+
+              return (
+                <div
+                  key={hobby.title}
+                  className="group relative rounded-xl border border-border/70 bg-card/60 p-5 shadow-xs transition-colors hover:border-primary/40 hover:bg-card/90"
+                >
+                  <div className="mb-3 inline-flex size-9 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary transition-colors group-hover:border-primary/40 group-hover:bg-primary/20">
+                    <Icon className="size-4" aria-hidden="true" />
+                  </div>
+                  <h4 className="text-sm font-semibold text-foreground">
+                    {hobby.title}
+                  </h4>
+                  <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                    {hobby.description}
                   </p>
                 </div>
               );
